@@ -1,0 +1,41 @@
+@import './scss/normalize';
+@import './scss/font-awesome';
+@import './scss/variables';
+@import './scss/grid';
+
+@font-face {
+	font-family: 'Segoe UI Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Regular'), url('./fonts/Segoe UI.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Segoe UI Bold'),
+		url('./fonts/Segoe UI Bold.woff') format('woff');
+}
+
+body {
+	font-family: 'Segoe UI Regular';
+	color: #616161;
+	overflow-x: hidden;
+	background-color: #fff;
+	background: linear-gradient(to right, #39547f, #410741);
+
+	* {
+		box-sizing: border-box;
+	}
+}
+
+b,
+strong {
+	font-family: 'Segoe UI Bold';
+}
+
+.app-wrapper {
+	max-width: $desktop-max-width;
+	margin: $column-gutter auto;
+}

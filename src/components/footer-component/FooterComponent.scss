@@ -1,0 +1,26 @@
+@import '../../scss/variables';
+
+.footer {
+	background-color: #27272e;
+	color: #bbb;
+	padding: $column-gutter;
+
+	.column-header {
+		font-family: $font-bold;
+		font-size: 24px;
+		color: #fff;
+		letter-spacing: -1px;
+		margin-bottom: $column-gutter / 2;
+	}
+
+	.column-content {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.copyright {
+		font-family: $font-bold;
+		font-size: 12px;
+		text-align: right;
+	}
+}

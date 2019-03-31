@@ -1,0 +1,66 @@
+$number-of-columns: 12 !default;
+$width-per-column: 100% / 12 !default;
+$column-gutter: 20px !default;
+
+.grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat($number-of-columns, 1fr);
+	grid-gap: $column-gutter / 2;
+
+	@for $i from 1 through $number-of-columns {
+		.col-#{$i} {
+			grid-column: span $i;
+		}
+	}
+
+	@for $i from 1 through $number-of-columns {
+		.row-#{$i} {
+			grid-row: span $i;
+		}
+	}
+}
+
+// .grid {
+// 	width: 100%;
+// 	padding-left: $column-gutter / 2;
+// 	padding-right: $column-gutter / 2;
+// 	margin-left: auto;
+// 	margin-right: auto;
+
+// 	.row {
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		margin-left: -$column-gutter / 2;
+// 		margin-right: -$column-gutter / 2;
+// 	}
+// }
+
+// %column-styles {
+// 	position: relative;
+// 	width: 100%;
+// 	min-height: 1px;
+// 	padding-right: $column-gutter / 2;
+// 	padding-left: $column-gutter / 2;
+// }
+
+// @for $i from 1 through $number-of-columns {
+// 	.col-#{$i},
+// 	.col-sm-#{$i} {
+// 		@extend %column-styles;
+// 	}
+// }
+
+// @for $i from 1 through $number-of-columns {
+// 	.col-#{$i} {
+// 		grid-column-start: span $i
+// 	}
+// }
+
+// @media only screen and (max-width: 767px) {
+// 	@for $i from 1 through $number-of-columns {
+// 		.col-sm-#{$i} {
+// 			width: $width-per-column * $i;
+// 		}
+// 	}
+// }
