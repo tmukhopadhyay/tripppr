@@ -10,7 +10,7 @@ interface IProps {
 class CarouselComponent extends Component<IProps, any> {
 	render() {
 		return (
-			<section className='bordered col-8'>
+			<section className={`${this.props.row} ${this.props.column}`}>
 				<Carousel autoplay={true}>
 					<img src='http://placehold.it/1000x400/ffffff/c0392b/&text=slide1' />
 					<img src='http://placehold.it/1000x400/ffffff/c0392b/&text=slide2' />

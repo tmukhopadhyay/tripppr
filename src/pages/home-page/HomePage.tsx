@@ -1,8 +1,7 @@
-import Carousel from 'nuka-carousel';
 import React, { Component } from 'react';
-import { CardComponent } from '../../components';
-import { CarouselContainer, SearchContainer } from '../../containers';
 import './HomePage.scss';
+import { CardComponent, MapComponent } from '../../components';
+import { CarouselContainer, SearchContainer, WeatherContainer } from '../../containers';
 
 class HomePage extends Component<any, any> {
 	render() {
@@ -16,12 +15,8 @@ class HomePage extends Component<any, any> {
 					description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 					theme='cyan'
 				/>
-				<section id='map' className='bordered col-4' />
-				<CardComponent
-					type='weather'
-					columnClass='col-8'
-					theme='light-purple'
-				/>
+				<MapComponent row='row-1' column='col-4' />
+				<WeatherContainer row='row-1' column='col-4' />
 				<CardComponent
 					type='icon'
 					iconClasses='fab fa-4x fa-linkedin-in'
