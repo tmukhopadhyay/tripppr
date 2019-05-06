@@ -21,46 +21,19 @@ $column-gutter: 20px !default;
 	}
 }
 
-// .grid {
-// 	width: 100%;
-// 	padding-left: $column-gutter / 2;
-// 	padding-right: $column-gutter / 2;
-// 	margin-left: auto;
-// 	margin-right: auto;
+.sub-grid {
+	display: grid;
+	grid-gap: $column-gutter / 2;
+}
 
-// 	.row {
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 		margin-left: -$column-gutter / 2;
-// 		margin-right: -$column-gutter / 2;
-// 	}
-// }
+.grid-layout-row {
+	grid-auto-flow: row;
+}
 
-// %column-styles {
-// 	position: relative;
-// 	width: 100%;
-// 	min-height: 1px;
-// 	padding-right: $column-gutter / 2;
-// 	padding-left: $column-gutter / 2;
-// }
+.grid-layout-column {
+	grid-auto-flow: column;
+}
 
-// @for $i from 1 through $number-of-columns {
-// 	.col-#{$i},
-// 	.col-sm-#{$i} {
-// 		@extend %column-styles;
-// 	}
-// }
-
-// @for $i from 1 through $number-of-columns {
-// 	.col-#{$i} {
-// 		grid-column-start: span $i
-// 	}
-// }
-
-// @media only screen and (max-width: 767px) {
-// 	@for $i from 1 through $number-of-columns {
-// 		.col-sm-#{$i} {
-// 			width: $width-per-column * $i;
-// 		}
-// 	}
-// }
+.grid-layout-dense {
+	grid-auto-flow: dense;
+}

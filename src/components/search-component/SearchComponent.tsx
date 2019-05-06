@@ -9,13 +9,13 @@ interface IProps {
 class SearchComponent extends Component<IProps, any> {
 	render() {
 		return (
-			<section className={`grid ${this.props.row} ${this.props.column}`}>
+			<section className={`grid search-component ${this.props.row} ${this.props.column}`}>
 				<input
 					type='text'
 					placeholder='Search places, cities, countries and continents'
-					className='col-10 search-box'
+					className='col-10 search-box theme-steel'
 				/>
-				<button className='search-button col-2'>
+				<button className='search-button theme-dark-blue col-2'>
 					<i className='fas fa-2x fa-search' />
 				</button>
 			</section>

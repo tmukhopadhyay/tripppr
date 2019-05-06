@@ -1,15 +1,17 @@
-.search-box {
-	padding: 15px 20px;
-	font-size: 24px;
+.search-component {
+	.search-box {
+		padding: 15px 20px;
+		font-size: 24px;
+		border-width: 0;
+		outline: none;
 
-	&::placeholder {
-		font-style: italic;
-		color: #ccc;
+		&::placeholder {
+			font-style: italic;
+			color: #ccc;
+		}
 	}
-}
 
-.search-button {
-	background-color: #a20025;
-	color: #fff;
-	border-width: 0;
+	.search-button {
+		border-width: 0;
+	}
 }

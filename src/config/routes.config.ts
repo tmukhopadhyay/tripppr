@@ -4,4 +4,4 @@ export class RouteConfig {
 	constructor(public path: string, public component: any) {}
 }
 
-export const routes = [new RouteConfig('/', HomePage)];
+export const routes = [new RouteConfig('/', HomePage), new RouteConfig('/home', HomePage)];

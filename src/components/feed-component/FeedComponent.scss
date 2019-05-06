@@ -1,0 +1,38 @@
+@import '../../scss/variables';
+
+.feed-component {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	text-decoration: none;
+
+	.thumbnail {
+		display: block;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		max-width: 80px;
+		margin-right: 10px;
+	}
+
+	.title {
+		font-family: $font-bold;
+		font-size: 14px;
+		margin-bottom: 6px;
+	}
+
+	.summary {
+		font-size: 12px;
+	}
+
+	&.see-more {
+		justify-content: center;
+
+		.caption {
+			margin-right: 5px;
+		}
+
+		.icon {
+			margin-top: 2px;
+		}
+	}
+}
