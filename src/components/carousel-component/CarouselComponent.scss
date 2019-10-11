@@ -1,0 +1,54 @@
+@import '../../scss/variables';
+
+$columns: 12 !default;
+
+.carousel-component {
+	.arrow-container {
+		padding: 0 $column-gutter;
+	}
+
+	.arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.slider {
+		overflow-x: hidden;
+		min-width: 0;
+		min-height: 0;
+	}
+
+	.slick-slider {
+		margin-left: -#{$column-gutter / 4};
+		margin-right: -#{$column-gutter / 4};
+	}
+
+	.slick-slide {
+		> div {
+			padding: 0 $column-gutter / 4;
+		}
+
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+
+	.image-wrapper {
+		position: relative;
+		display: block !important;
+
+		figcaption {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding: $column-gutter;
+			background-color: rgba(0, 0, 0, 0.6);
+			color: #ddd;
+		}
+	}
+}

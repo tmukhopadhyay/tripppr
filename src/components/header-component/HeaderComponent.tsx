@@ -4,7 +4,7 @@ import './HeaderComponent.scss';
 class HeaderComponent extends Component {
 	render() {
 		return (
-			<header className='app-wrapper header'>
+			<header className='app-wrapper header-component'>
 				<h1 className='logo'>Tripppr</h1>
 			</header>
 		);

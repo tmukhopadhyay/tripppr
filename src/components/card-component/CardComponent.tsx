@@ -3,71 +3,45 @@ import './CardComponent.scss';
 
 interface IProps {
 	type: string;
+	row: string;
+	column: string;
+	theme: string;
+	target?: string;
 	title?: string;
-	description?: string;
+	summary?: string;
 	iconClasses?: string;
-	columnClass?: string;
-	theme?: string;
-	image?: string;
 }
 
 class CardComponent extends Component<IProps, any> {
 	public static defaultProps = {
-		type: 'default'
+		type: 'default',
+		theme: 'default'
 	};
 
 	private getIconCard(): JSX.Element {
+		const target = this.props.target ? '_blank' : '_self';
 		return (
-			<section className={`card-wrapper ${this.props.columnClass}`}>
-				<section
-					className={`card centered-content theme-${
-						this.props.theme
-					}`}
+			<figure className={`card-wrapper ${this.props.row} ${this.props.column}`}>
+				<a
+					href={this.props.target || '#'}
+					target='_'
+					className={`card-component icon-card theme-${this.props.theme}`}
 				>
 					<i className={this.props.iconClasses} />
-				</section>
-			</section>
+				</a>
+			</figure>
 		);
 	}
 
 	private getDefaultCard(): JSX.Element {
 		return (
-			<section className={`card-wrapper ${this.props.columnClass}`}>
-				<section className={`card theme-${this.props.theme}`}>
-					{this.props.image && (
-						<img className='image' src={this.props.image} />
-					)}
-					{this.props.title && (
-						<h3 className='title'>{this.props.title}</h3>
-					)}
-					{this.props.description && (
-						<p className='description'>{this.props.description}</p>
-					)}
-				</section>
-			</section>
-		);
-	}
-
-	private getWeatherCard(): JSX.Element {
-		return (
-			<section className='col-8 row-3'>
-				<section
-					className={`card-wrapper ${this.props.columnClass} row-2`}
-				>
-					<section className={`card theme-${this.props.theme}`} />
-				</section>
-				<section className={`card-wrapper col-2 row-1`}>
-					<section className={`card theme-${this.props.theme}`} />
-				</section>
-				<section className={`card-wrapper col-2 row-1`}>
-					<section className={`card theme-${this.props.theme}`} />
-				</section>
-				<section className={`card-wrapper col-2 row-1`}>
-					<section className={`card theme-${this.props.theme}`} />
-				</section>
-				<section className={`card-wrapper col-2 row-1`}>
-					<section className={`card theme-${this.props.theme}`} />
-				</section>
+			<section
+				className={`card-component default-card ${this.props.row} ${this.props.column} theme-${
+					this.props.theme
+				}`}
+			>
+				{this.props.title && <h3 className='title'>{this.props.title}</h3>}
+				{this.props.summary && <p className='description'>{this.props.summary}</p>}
 			</section>
 		);
 	}
@@ -76,9 +50,6 @@ class CardComponent extends Component<IProps, any> {
 		switch (this.props.type) {
 			case 'icon':
 				return this.getIconCard();
-				break;
-			case 'weather':
-				return this.getWeatherCard();
 				break;
 			default:
 				return this.getDefaultCard();

@@ -2,6 +2,7 @@
 @import './scss/font-awesome';
 @import './scss/variables';
 @import './scss/grid';
+@import './scss/themes';
 
 @font-face {
 	font-family: 'Segoe UI Regular';
@@ -14,8 +15,7 @@
 	font-family: 'Segoe UI Bold';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Segoe UI Bold'),
-		url('./fonts/Segoe UI Bold.woff') format('woff');
+	src: local('Segoe UI Bold'), url('./fonts/Segoe UI Bold.woff') format('woff');
 }
 
 body {
@@ -38,4 +38,13 @@ strong {
 .app-wrapper {
 	max-width: $desktop-max-width;
 	margin: $column-gutter auto;
+}
+
+.clearfix {
+	&:before,
+	&:after {
+		clear: both;
+		display: block;
+		content: '';
+	}
 }
